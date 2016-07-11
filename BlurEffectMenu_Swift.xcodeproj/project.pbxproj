@@ -1,0 +1,345 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		84211D861D33CF9000493E17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84211D851D33CF9000493E17 /* AppDelegate.swift */; };
+		84211D881D33CF9000493E17 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84211D871D33CF9000493E17 /* ViewController.swift */; };
+		84211D8B1D33CF9000493E17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84211D891D33CF9000493E17 /* Main.storyboard */; };
+		84211D8D1D33CF9000493E17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84211D8C1D33CF9000493E17 /* Assets.xcassets */; };
+		84211D901D33CF9000493E17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84211D8E1D33CF9000493E17 /* LaunchScreen.storyboard */; };
+		84211D981D33D00000493E17 /* BlurEffectMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84211D971D33D00000493E17 /* BlurEffectMenu.swift */; };
+		84211DA31D33EC6F00493E17 /* addMatters@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84211D9A1D33EC6F00493E17 /* addMatters@2x.png */; };
+		84211DA41D33EC6F00493E17 /* addMatters@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84211D9B1D33EC6F00493E17 /* addMatters@3x.png */; };
+		84211DA51D33EC6F00493E17 /* addSchedule@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84211D9C1D33EC6F00493E17 /* addSchedule@2x.png */; };
+		84211DA61D33EC6F00493E17 /* addSchedule@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84211D9D1D33EC6F00493E17 /* addSchedule@3x.png */; };
+		84211DA71D33EC6F00493E17 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 84211D9E1D33EC6F00493E17 /* bg.png */; };
+		84211DA81D33EC6F00493E17 /* searchContacts@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84211D9F1D33EC6F00493E17 /* searchContacts@2x.png */; };
+		84211DA91D33EC6F00493E17 /* searchContacts@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84211DA01D33EC6F00493E17 /* searchContacts@3x.png */; };
+		84211DAA1D33EC6F00493E17 /* setupChat@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84211DA11D33EC6F00493E17 /* setupChat@2x.png */; };
+		84211DAB1D33EC6F00493E17 /* setupChat@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84211DA21D33EC6F00493E17 /* setupChat@3x.png */; };
+		84211DAD1D33EC8700493E17 /* BlurEffectMenu.gif in Resources */ = {isa = PBXBuildFile; fileRef = 84211DAC1D33EC8700493E17 /* BlurEffectMenu.gif */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		84211D821D33CF9000493E17 /* BlurEffectMenu_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlurEffectMenu_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		84211D851D33CF9000493E17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		84211D871D33CF9000493E17 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		84211D8A1D33CF9000493E17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		84211D8C1D33CF9000493E17 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		84211D8F1D33CF9000493E17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		84211D911D33CF9000493E17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84211D971D33D00000493E17 /* BlurEffectMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurEffectMenu.swift; sourceTree = "<group>"; };
+		84211D9A1D33EC6F00493E17 /* addMatters@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "addMatters@2x.png"; sourceTree = "<group>"; };
+		84211D9B1D33EC6F00493E17 /* addMatters@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "addMatters@3x.png"; sourceTree = "<group>"; };
+		84211D9C1D33EC6F00493E17 /* addSchedule@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "addSchedule@2x.png"; sourceTree = "<group>"; };
+		84211D9D1D33EC6F00493E17 /* addSchedule@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "addSchedule@3x.png"; sourceTree = "<group>"; };
+		84211D9E1D33EC6F00493E17 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
+		84211D9F1D33EC6F00493E17 /* searchContacts@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchContacts@2x.png"; sourceTree = "<group>"; };
+		84211DA01D33EC6F00493E17 /* searchContacts@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchContacts@3x.png"; sourceTree = "<group>"; };
+		84211DA11D33EC6F00493E17 /* setupChat@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "setupChat@2x.png"; sourceTree = "<group>"; };
+		84211DA21D33EC6F00493E17 /* setupChat@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "setupChat@3x.png"; sourceTree = "<group>"; };
+		84211DAC1D33EC8700493E17 /* BlurEffectMenu.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = BlurEffectMenu.gif; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		84211D7F1D33CF9000493E17 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		84211D791D33CF9000493E17 = {
+			isa = PBXGroup;
+			children = (
+				84211D841D33CF9000493E17 /* BlurEffectMenu_Swift */,
+				84211D831D33CF9000493E17 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		84211D831D33CF9000493E17 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				84211D821D33CF9000493E17 /* BlurEffectMenu_Swift.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		84211D841D33CF9000493E17 /* BlurEffectMenu_Swift */ = {
+			isa = PBXGroup;
+			children = (
+				84211DAC1D33EC8700493E17 /* BlurEffectMenu.gif */,
+				84211D991D33EC6F00493E17 /* Resources */,
+				84211D851D33CF9000493E17 /* AppDelegate.swift */,
+				84211D971D33D00000493E17 /* BlurEffectMenu.swift */,
+				84211D871D33CF9000493E17 /* ViewController.swift */,
+				84211D891D33CF9000493E17 /* Main.storyboard */,
+				84211D8C1D33CF9000493E17 /* Assets.xcassets */,
+				84211D8E1D33CF9000493E17 /* LaunchScreen.storyboard */,
+				84211D911D33CF9000493E17 /* Info.plist */,
+			);
+			path = BlurEffectMenu_Swift;
+			sourceTree = "<group>";
+		};
+		84211D991D33EC6F00493E17 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				84211D9A1D33EC6F00493E17 /* addMatters@2x.png */,
+				84211D9B1D33EC6F00493E17 /* addMatters@3x.png */,
+				84211D9C1D33EC6F00493E17 /* addSchedule@2x.png */,
+				84211D9D1D33EC6F00493E17 /* addSchedule@3x.png */,
+				84211D9E1D33EC6F00493E17 /* bg.png */,
+				84211D9F1D33EC6F00493E17 /* searchContacts@2x.png */,
+				84211DA01D33EC6F00493E17 /* searchContacts@3x.png */,
+				84211DA11D33EC6F00493E17 /* setupChat@2x.png */,
+				84211DA21D33EC6F00493E17 /* setupChat@3x.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		84211D811D33CF9000493E17 /* BlurEffectMenu_Swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84211D941D33CF9000493E17 /* Build configuration list for PBXNativeTarget "BlurEffectMenu_Swift" */;
+			buildPhases = (
+				84211D7E1D33CF9000493E17 /* Sources */,
+				84211D7F1D33CF9000493E17 /* Frameworks */,
+				84211D801D33CF9000493E17 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BlurEffectMenu_Swift;
+			productName = BlurEffectMenu_Swift;
+			productReference = 84211D821D33CF9000493E17 /* BlurEffectMenu_Swift.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		84211D7A1D33CF9000493E17 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "刘隆昌";
+				TargetAttributes = {
+					84211D811D33CF9000493E17 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 84211D7D1D33CF9000493E17 /* Build configuration list for PBXProject "BlurEffectMenu_Swift" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 84211D791D33CF9000493E17;
+			productRefGroup = 84211D831D33CF9000493E17 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				84211D811D33CF9000493E17 /* BlurEffectMenu_Swift */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		84211D801D33CF9000493E17 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84211DA81D33EC6F00493E17 /* searchContacts@2x.png in Resources */,
+				84211D901D33CF9000493E17 /* LaunchScreen.storyboard in Resources */,
+				84211DA61D33EC6F00493E17 /* addSchedule@3x.png in Resources */,
+				84211DAB1D33EC6F00493E17 /* setupChat@3x.png in Resources */,
+				84211DA71D33EC6F00493E17 /* bg.png in Resources */,
+				84211DA91D33EC6F00493E17 /* searchContacts@3x.png in Resources */,
+				84211DAA1D33EC6F00493E17 /* setupChat@2x.png in Resources */,
+				84211DAD1D33EC8700493E17 /* BlurEffectMenu.gif in Resources */,
+				84211DA41D33EC6F00493E17 /* addMatters@3x.png in Resources */,
+				84211D8D1D33CF9000493E17 /* Assets.xcassets in Resources */,
+				84211D8B1D33CF9000493E17 /* Main.storyboard in Resources */,
+				84211DA31D33EC6F00493E17 /* addMatters@2x.png in Resources */,
+				84211DA51D33EC6F00493E17 /* addSchedule@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		84211D7E1D33CF9000493E17 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84211D981D33D00000493E17 /* BlurEffectMenu.swift in Sources */,
+				84211D881D33CF9000493E17 /* ViewController.swift in Sources */,
+				84211D861D33CF9000493E17 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		84211D891D33CF9000493E17 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84211D8A1D33CF9000493E17 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		84211D8E1D33CF9000493E17 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84211D8F1D33CF9000493E17 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		84211D921D33CF9000493E17 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		84211D931D33CF9000493E17 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		84211D951D33CF9000493E17 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = BlurEffectMenu_Swift/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Id.BlurEffectMenu-Swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		84211D961D33CF9000493E17 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = BlurEffectMenu_Swift/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Id.BlurEffectMenu-Swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		84211D7D1D33CF9000493E17 /* Build configuration list for PBXProject "BlurEffectMenu_Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84211D921D33CF9000493E17 /* Debug */,
+				84211D931D33CF9000493E17 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84211D941D33CF9000493E17 /* Build configuration list for PBXNativeTarget "BlurEffectMenu_Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84211D951D33CF9000493E17 /* Debug */,
+				84211D961D33CF9000493E17 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 84211D7A1D33CF9000493E17 /* Project object */;
+}
