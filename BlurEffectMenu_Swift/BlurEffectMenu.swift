@@ -181,10 +181,10 @@ class BlurEffectMenu: UIViewController{
         for idx in 0..<self.menuItemArr.count {
             
             
-            let row = CGFloat(idx)/totaloc //行号
+            let row = idx/Int(totaloc) //行号
             let loc = CGFloat(idx)%totaloc //列号
             let appViewX = margin + (margin+appViewW)*loc
-            let appViewY = 100 + (50+appVIewH)*row
+            let appViewY : CGFloat = CGFloat( 100 +  (Int(50+appVIewH))*row )
 //            button
             let button = UIButton(type:.Custom)
             button.frame = CGRectMake(appViewX, -300, appViewW, appVIewH)
@@ -206,26 +206,31 @@ class BlurEffectMenu: UIViewController{
             button.setImage(item.icon, forState: .Normal)
             label.text = item.title
             
+            
+            
+            
+            
+            
+            
+            
+            
 //            Spring Animation
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (__int64_t)(UInt64(0.05)*NSEC_PER_SEC)), dispatch_get_main_queue(), {
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (__int64_t)(0.05*Double(NSEC_PER_SEC))),dispatch_get_main_queue(), {
                 
 //                UIView animate动画；仿丁丁弹出添加按钮， 从顶部弹到指定位置
                 
-                UIView.animateWithDuration(1, delay: (0.2-0.02*Double(idx)), options: .CurveEaseInOut, animations: {
+                UIView.animateWithDuration(1, delay: (0.2-0.02*Double(idx)), usingSpringWithDamping: 1.0, initialSpringVelocity: 15.0, options: .CurveEaseInOut, animations: {
+                    
                     
                     button.frame = CGRectMake(appViewX, appViewY, appViewW, appVIewH)
                     label.frame = CGRectMake(appViewX, button.frame.origin.y+button.bounds.size.height+5, appViewW, 25)
                     
                     
-                    }, completion: { (finished) in
+                    }, completion: { (finish) in
                         
                 })
-                
+               
             })
-            
-            
-            
-            
             
         }
         
