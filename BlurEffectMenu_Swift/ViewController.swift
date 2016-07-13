@@ -96,6 +96,9 @@ class ViewController: UIViewController,BlurEffectMenuDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.view.backgroundColor = UIColor(patternImage:UIImage(named: "bg")!)
+
+
         self.btn.addTarget(self, action: #selector(ViewController.btnClicked(_:)), forControlEvents: .TouchUpInside)
         
         
