@@ -138,6 +138,7 @@
 					84211D811D33CF9000493E17 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = 78CLLRK5S2;
+						LastSwiftMigration = 0830;
 					};
 				};
 			};
@@ -313,6 +314,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.company.nanchangwater;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "27ec764d-9d72-41f7-8049-942df90364f8";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -327,6 +329,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.company.nanchangwater;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "27ec764d-9d72-41f7-8049-942df90364f8";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

@@ -12,9 +12,9 @@ import UIKit
 protocol BlurEffectMenuDelegate {
     
 //    点击背景dismiss
-    func blurEffectMenuDidTapOnBackground(menu:BlurEffectMenu)
+    func blurEffectMenuDidTapOnBackground(_ menu:BlurEffectMenu)
 //    点击item
-    func blurEffect(Menu:BlurEffectMenu,didTapOnItem item:BlurEffectMenuItem)
+    func blurEffect(_ Menu:BlurEffectMenu,didTapOnItem item:BlurEffectMenuItem)
     
 }
 
@@ -42,7 +42,7 @@ class BlurEffectMenu: UIViewController{
         super.viewDidLoad()
 
         
-        self.view.backgroundColor = UIColor.clearColor()
+        self.view.backgroundColor = UIColor.clear
         
 //        手势
         self.gesture()
@@ -60,7 +60,7 @@ class BlurEffectMenu: UIViewController{
         
         let swipeGesture = UISwipeGestureRecognizer(target: self,action: #selector(BlurEffectMenu.didTapOnBackground(_:)))
         
-        swipeGesture.direction = .Up
+        swipeGesture.direction = .up
         self.view.addGestureRecognizer(swipeGesture)
         
     }
@@ -74,11 +74,11 @@ class BlurEffectMenu: UIViewController{
             if view is UIButton {
                 
                 let btn : UIButton = view as! UIButton
-                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (__int64_t)(UInt64(0.05)*NSEC_PER_SEC)), dispatch_get_main_queue(), {
+                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + Double((__int64_t)(UInt64(0.05)*NSEC_PER_SEC)) / Double(NSEC_PER_SEC), execute: {
                     
-                    UIView.animateWithDuration(1, delay: 0.02*(Double(btn.tag)), usingSpringWithDamping: 0.6, initialSpringVelocity: 1.5, options: .CurveEaseInOut, animations: {
+                    UIView.animate(withDuration: 1, delay: 0.02*(Double(btn.tag)), usingSpringWithDamping: 0.6, initialSpringVelocity: 1.5, options: UIViewAnimationOptions(), animations: {
                         
-                        btn.frame = CGRectMake(btn.frame.origin.x, -300, btn.frame.size.width, btn.frame.size.height)
+                        btn.frame = CGRect(x: btn.frame.origin.x, y: -300, width: btn.frame.size.width, height: btn.frame.size.height)
                         
                         
                         }, completion: { (finish) in
@@ -96,11 +96,11 @@ class BlurEffectMenu: UIViewController{
             if view is UILabel {
                 
                 let label : UILabel = view as! UILabel
-                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (__int64_t)(UInt64(0.05)*NSEC_PER_SEC)), dispatch_get_main_queue(), {
+                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + Double((__int64_t)(UInt64(0.05)*NSEC_PER_SEC)) / Double(NSEC_PER_SEC), execute: {
                     
-                    UIView.animateWithDuration(1, delay: 0.02*(Double(label.tag)), usingSpringWithDamping: 0.6, initialSpringVelocity: 1.5, options: .CurveEaseInOut, animations: {
+                    UIView.animate(withDuration: 1, delay: 0.02*(Double(label.tag)), usingSpringWithDamping: 0.6, initialSpringVelocity: 1.5, options: UIViewAnimationOptions(), animations: {
                         
-                        label.textColor = UIColor.clearColor()
+                        label.textColor = UIColor.clear
                         
                         }, completion: { (finish) in
                             
@@ -121,11 +121,11 @@ class BlurEffectMenu: UIViewController{
         
     }
     
-    func didTapOnBackground(tap:UITapGestureRecognizer){
+    func didTapOnBackground(_ tap:UITapGestureRecognizer){
         
 //        点击空白处 dismiss
         self.customAnimation()
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (__int64_t)(UInt64(0.3)*NSEC_PER_SEC)), dispatch_get_main_queue()) {
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + Double((__int64_t)(UInt64(0.3)*NSEC_PER_SEC)) / Double(NSEC_PER_SEC)) {
             
 //            刘锱歌
             if self.delegate != nil {
@@ -138,21 +138,21 @@ class BlurEffectMenu: UIViewController{
        
     }
     
-    func itemBtnClicked(sender:UIButton){
+    func itemBtnClicked(_ sender:UIButton){
         
 //        点击按钮缩放代码
-        UIView.animateWithDuration(0.25, animations: {
+        UIView.animate(withDuration: 0.25, animations: {
             
-            sender.transform = CGAffineTransformMakeScale(1.7, 1.7)
+            sender.transform = CGAffineTransform(scaleX: 1.7, y: 1.7)
             
-            }) { (finsh) in
+            }, completion: { (finsh) in
                 
-        }
+        }) 
         
 //        button dismiss动画 Sring Animation
         self.customAnimation()
 
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (__int64_t)(UInt64(0.3)*NSEC_PER_SEC)), dispatch_get_main_queue()) {
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + Double((__int64_t)(UInt64(0.3)*NSEC_PER_SEC)) / Double(NSEC_PER_SEC)) {
             
             
             if self.delegate != nil {
@@ -168,7 +168,7 @@ class BlurEffectMenu: UIViewController{
     func setUpView(){
         
 //        毛玻璃
-        let blurEffect = UIBlurEffect(style:.Light)
+        let blurEffect = UIBlurEffect(style:.light)
         let visualEffectView = UIVisualEffectView(effect:blurEffect)
         visualEffectView.frame = self.view.bounds
         self.view.addSubview(visualEffectView)
@@ -182,28 +182,28 @@ class BlurEffectMenu: UIViewController{
             
             
             let row = idx/Int(totaloc) //行号
-            let loc = CGFloat(idx)%totaloc //列号
+            let loc = CGFloat(idx).truncatingRemainder(dividingBy: totaloc) //列号
             let appViewX = margin + (margin+appViewW)*loc
             let appViewY : CGFloat = CGFloat( 100 +  (Int(50+appVIewH))*row )
 //            button
-            let button = UIButton(type:.Custom)
-            button.frame = CGRectMake(appViewX, -300, appViewW, appVIewH)
+            let button = UIButton(type:.custom)
+            button.frame = CGRect(x: appViewX, y: -300, width: appViewW, height: appVIewH)
             button.tag = idx
-            button.addTarget(self, action: #selector(BlurEffectMenu.itemBtnClicked(_:)), forControlEvents: .TouchUpInside)
+            button.addTarget(self, action: #selector(BlurEffectMenu.itemBtnClicked(_:)), for: .touchUpInside)
             self.view.addSubview(button)
 //            Label
             
             
             let label = UILabel()
-            label.frame = CGRectMake(appViewX, button.frame.origin.y + button.bounds.size.height+5, appViewW, 25)
-            label.textColor = UIColor.grayColor()
-            label.font = UIFont.systemFontOfSize(14.0)
-            label.textAlignment = .Center
+            label.frame = CGRect(x: appViewX, y: button.frame.origin.y + button.bounds.size.height+5, width: appViewW, height: 25)
+            label.textColor = UIColor.gray
+            label.font = UIFont.systemFont(ofSize: 14.0)
+            label.textAlignment = .center
             label.tag = idx
             self.view.addSubview(label)
             
             let item : BlurEffectMenuItem = self.menuItemArr[idx] as! BlurEffectMenuItem
-            button.setImage(item.icon, forState: .Normal)
+            button.setImage(item.icon, for: UIControlState())
             label.text = item.title
             
             
@@ -215,15 +215,15 @@ class BlurEffectMenu: UIViewController{
             
             
 //            Spring Animation
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (__int64_t)(0.05*Double(NSEC_PER_SEC))),dispatch_get_main_queue(), {
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + Double((__int64_t)(0.05*Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC), execute: {
                 
 //                UIView animate动画；仿丁丁弹出添加按钮， 从顶部弹到指定位置
                 
-                UIView.animateWithDuration(1, delay: (0.2-0.02*Double(idx)), usingSpringWithDamping: 1.0, initialSpringVelocity: 15.0, options: .CurveEaseInOut, animations: {
+                UIView.animate(withDuration: 1, delay: (0.2-0.02*Double(idx)), usingSpringWithDamping: 1.0, initialSpringVelocity: 15.0, options: UIViewAnimationOptions(), animations: {
                     
                     
-                    button.frame = CGRectMake(appViewX, appViewY, appViewW, appVIewH)
-                    label.frame = CGRectMake(appViewX, button.frame.origin.y+button.bounds.size.height+5, appViewW, 25)
+                    button.frame = CGRect(x: appViewX, y: appViewY, width: appViewW, height: appVIewH)
+                    label.frame = CGRect(x: appViewX, y: button.frame.origin.y+button.bounds.size.height+5, width: appViewW, height: 25)
                     
                     
                     }, completion: { (finish) in

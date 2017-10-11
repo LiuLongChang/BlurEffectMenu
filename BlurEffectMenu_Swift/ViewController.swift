@@ -8,9 +8,9 @@
 
 import UIKit
 
-let kScreenWidth = UIScreen.mainScreen().bounds.size.width
+let kScreenWidth = UIScreen.main.bounds.size.width
 
-let kScreenHeight = UIScreen.mainScreen().bounds.size.height
+let kScreenHeight = UIScreen.main.bounds.size.height
 
 
 
@@ -23,23 +23,23 @@ class ViewController: UIViewController,BlurEffectMenuDelegate {
     
         
     
-        let btn = UIButton(type: .Custom)
+        let btn = UIButton(type: .custom)
         
-        btn.frame = CGRectMake(kScreenWidth/2-30.0, kScreenHeight-49.0-60.0, 60.0, 60.0)
+        btn.frame = CGRect(x: kScreenWidth/2-30.0, y: kScreenHeight-49.0-60.0, width: 60.0, height: 60.0)
         
-        btn.setTitle("点击", forState: .Normal)
+        btn.setTitle("点击", for: UIControlState())
         
-        btn.setTitleColor(UIColor.blueColor(), forState: .Normal)
+        btn.setTitleColor(UIColor.blue, for: UIControlState())
         
         btn.layer.borderWidth = 0.5
         
-        btn.layer.borderColor = UIColor.darkGrayColor().CGColor
+        btn.layer.borderColor = UIColor.darkGray.cgColor
         
         btn.layer.cornerRadius = 30.0
         
         btn.layer.masksToBounds = true
         
-        btn.backgroundColor = UIColor.lightGrayColor()
+        btn.backgroundColor = UIColor.lightGray
         
         
         return btn
@@ -47,7 +47,7 @@ class ViewController: UIViewController,BlurEffectMenuDelegate {
     } ()
 
     
-    func btnClicked(btn:UIButton){
+    func btnClicked(_ btn:UIButton){
         
         let addMattersItem = BlurEffectMenuItem()
         addMattersItem.title = "添加事项"
@@ -71,24 +71,24 @@ class ViewController: UIViewController,BlurEffectMenuDelegate {
         
         let menu = BlurEffectMenu(menus:[addMattersItem,addSchedulesItem,setupChatItem,searchContactsItem,addMattersItem])
         menu.delegate = self
-        menu.modalPresentationStyle = .OverFullScreen
-        menu.modalTransitionStyle = .CrossDissolve
-        self.presentViewController(menu, animated: true, completion: nil)
+        menu.modalPresentationStyle = .overFullScreen
+        menu.modalTransitionStyle = .crossDissolve
+        self.present(menu, animated: true, completion: nil)
         
         
         
     }
     
-    func blurEffectMenuDidTapOnBackground(menu: BlurEffectMenu) {
+    func blurEffectMenuDidTapOnBackground(_ menu: BlurEffectMenu) {
         
-        self.dismissViewControllerAnimated(true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
         
     }
     
     
-    func blurEffect(Menu: BlurEffectMenu, didTapOnItem item: BlurEffectMenuItem) {
+    func blurEffect(_ Menu: BlurEffectMenu, didTapOnItem item: BlurEffectMenuItem) {
         
-        self.dismissViewControllerAnimated(true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
         
     }
     
@@ -99,7 +99,7 @@ class ViewController: UIViewController,BlurEffectMenuDelegate {
         self.view.backgroundColor = UIColor(patternImage:UIImage(named: "bg")!)
 
 
-        self.btn.addTarget(self, action: #selector(ViewController.btnClicked(_:)), forControlEvents: .TouchUpInside)
+        self.btn.addTarget(self, action: #selector(ViewController.btnClicked(_:)), for: .touchUpInside)
         
         
         self.view.addSubview(self.btn)
